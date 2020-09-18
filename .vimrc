@@ -38,3 +38,4 @@ set tabstop=4                       " tab spacing
 set expandtab                       " expand tabs to spaces
 set noerrorbells visualbell t_vb=   " get rid of that annoying bell
 set number                          " display line numbers
+set colorcolumn=80                  " show a colored column at the desired row length
