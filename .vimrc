@@ -5,7 +5,7 @@ filetype off                  " required
 " PLUGIN MANAGER
 " ---------------------------
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=${HOME}/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 
 colo ron                            " colour scheme
 set tabstop=4                       " tab spacing
+set shiftwidth=4                       " tab spacing
 set expandtab                       " expand tabs to spaces
 set noerrorbells visualbell t_vb=   " get rid of that annoying bell
 set number                          " display line numbers
