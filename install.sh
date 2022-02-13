@@ -1,3 +1,4 @@
+# Copy dotfiles
 for dotfile in .vimrc .inputrc
 do
         source=$(pwd)/${dotfile}
@@ -13,3 +14,15 @@ do
         # create the link to the dotfile
         ln -s ${source} ${target}
 done
+
+# Check that vundle plugin manager has been installed
+
+VUNDLE_DIR=~/.vim/bundle/Vundle.vim
+
+echo "Checking for Vundle install at ${VUNDLE_DIR}"
+
+if [ ! -d ${VUNDLE_DIR} ]; then
+    echo "Installing vundle to ${VUNDLE_DIR}"
+    git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_DIR}
+fi
+
